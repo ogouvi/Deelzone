@@ -1,6 +1,6 @@
 export const AppConfig = {
-  site_name: 'Starter',
-  title: 'Nextjs Starter',
-  description: 'Starter code for your Nextjs Boilerplate with Tailwind CSS',
-  locale: 'en',
+  site_name: 'Deelz',
+  title: 'Deelzone, plateforme de revente',
+  description: 'Meilleur et la plugrande plateforme de revente au Togo ',
+  locale: 'fr',
 };

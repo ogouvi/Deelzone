@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Background } from '../background/Background';
@@ -8,16 +9,23 @@ import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
 const Hero = () => (
-  <Background color="bg-gray-100">
+  <Background color="bg-purple-100">
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
-        <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            GitHub
-          </Link>
-        </li>
-        <li>
-          <Link href="/">Sign in</Link>
+        <li className="flex flex-row gap-1">
+          <Image
+            src="/assets/images/whatsapp.png"
+            alt="whatsapp icon"
+            width={28}
+            height={20}
+          />
+          <a
+            href="whatsapp://send?text=J'ai trouvé la meilleure app pour vendre en ligne, je ne peux garder ce secret pour moi seul!🤝🤝 "
+            target="_blank"
+            rel="noreferrer"
+          >
+            Partager l&apos;App
+          </a>
         </li>
       </NavbarTwoColumns>
     </Section>
@@ -26,14 +34,16 @@ const Hero = () => (
       <HeroOneButton
         title={
           <>
-            {'The modern landing page for\n'}
-            <span className="text-primary-500">React developers</span>
+            {'La nouvelle plateforme de revente pour \n'}
+            <span className="text-4xl text-[#6f3090]">
+              Particuliers comme Business
+            </span>
           </>
         }
-        description="The easiest way to build a React landing page in seconds."
+        description="Le moyen le plus simple possible pour vendre vos articles en quelques clicks! 🤷🏾‍♂️🤷🏾‍♂️🤷🏾‍♂️ ."
         button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
-            <Button xl>Download Your Free Theme</Button>
+          <Link href="https://expo.dev/artifacts/eas/vmRJ1Dt1CTbeGj8w2136Ve.apk">
+            <Button xl>⬇️Installer Maintenant 🫵</Button>
           </Link>
         }
       />

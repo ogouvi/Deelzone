@@ -55,7 +55,7 @@ const Footer = () => (
         </li>
         <li className="font-semibold text-[#6f3090]">
           <a
-            href="whatsapp://send?text=Salut, j'utilise  Deelz, apprecie Deelz avec moi"
+            href="whatsapp://send?text=Salut, j'utilise  Deelz, apprecie Deelz avec moi,  Voici le lien https://expo.dev/artifacts/eas/vmRJ1Dt1CTbeGj8w2136Ve.apk"
             target="_blank"
             rel="noreferrer"
           >

@@ -20,7 +20,7 @@ const Hero = () => (
             height={20}
           />
           <a
-            href="whatsapp://send?text=J'ai trouvé la meilleure app pour vendre en ligne, je ne peux garder ce secret pour moi seul!🤝🤝 "
+            href="whatsapp://send?text=J'ai trouvé la meilleure app pour vendre en ligne, je ne peux garder ce secret pour moi seul!🤝🤝  voici le lien https://expo.dev/artifacts/eas/vmRJ1Dt1CTbeGj8w2136Ve.apk"
             target="_blank"
             rel="noreferrer"
           >

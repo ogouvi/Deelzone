@@ -10,7 +10,7 @@ const Banner = () => (
       title="Il n'existe pas encore un moyen plus facile de vendre que Ça"
       subtitle="Telecharger et commencer à vendre"
       button={
-        <Link href="https://expo.dev/artifacts/eas/vmRJ1Dt1CTbeGj8w2136Ve.apk">
+        <Link href="https://expo.dev/artifacts/eas/8E4gTjrsgtvTd2wZWk6bzj.apk">
           <Button>Telecharger</Button>
         </Link>
       }

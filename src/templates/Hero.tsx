@@ -20,7 +20,7 @@ const Hero = () => (
             height={20}
           />
           <a
-            href="whatsapp://send?text=J'ai trouvé la meilleure app pour vendre en ligne, je ne peux garder ce secret pour moi seul!🤝🤝  voici le lien https://expo.dev/artifacts/eas/8E4gTjrsgtvTd2wZWk6bzj.apk"
+            href="whatsapp://send?text=J'ai trouvé la meilleure app pour vendre en ligne, je ne peux garder ce secret pour moi seul!🤝🤝  voici le lien https://bit.ly/3EZrzqE"
             target="_blank"
             rel="noreferrer"
           >
@@ -42,7 +42,7 @@ const Hero = () => (
         }
         description="Le moyen le plus simple possible pour vendre vos articles en quelques clicks! 🤷🏾‍♂️🤷🏾‍♂️🤷🏾‍♂️ ."
         button={
-          <Link href="https://expo.dev/artifacts/eas/8E4gTjrsgtvTd2wZWk6bzj.apk">
+          <Link href="https://bit.ly/3EZrzqE">
             <Button xl>⬇️Installer Maintenant 🫵</Button>
           </Link>
         }

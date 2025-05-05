@@ -20,7 +20,7 @@ const Hero = () => (
             height={20}
           />
           <a
-            href="whatsapp://send?text=J'ai trouvé la meilleure app pour vendre en ligne, je ne peux garder ce secret pour moi seul!🤝🤝  voici le lien https://bit.ly/3EZrzqE"
+            href="whatsapp://send?text=J'ai trouvé la meilleure app pour vendre en ligne, je ne peux garder ce secret pour moi seul!🤝🤝  voici le lien https://www.dropbox.com/scl/fi/53zbf8cmb9o9a73w9v0sl/application-deelz-v0.1.apk?rlkey=5hbiwzf41gxv4yvlvmaqzi2i8&st=5h0y0w6e&dl=1"
             target="_blank"
             rel="noreferrer"
           >
@@ -42,7 +42,7 @@ const Hero = () => (
         }
         description="Le moyen le plus simple possible pour vendre vos articles en quelques clicks! 🤷🏾‍♂️🤷🏾‍♂️🤷🏾‍♂️ ."
         button={
-          <Link href="https://bit.ly/3EZrzqE">
+          <Link href="https://www.dropbox.com/scl/fi/53zbf8cmb9o9a73w9v0sl/application-deelz-v0.1.apk?rlkey=5hbiwzf41gxv4yvlvmaqzi2i8&st=5h0y0w6e&dl=1">
             <Button xl>⬇️Installer Maintenant 🫵</Button>
           </Link>
         }

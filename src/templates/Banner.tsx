@@ -10,7 +10,7 @@ const Banner = () => (
       title="Il n'existe pas encore un moyen plus facile de vendre que Ça"
       subtitle="Telecharger et commencer à vendre"
       button={
-        <Link href="https://www.dropbox.com/scl/fi/53zbf8cmb9o9a73w9v0sl/application-deelz-v0.1.apk?rlkey=5hbiwzf41gxv4yvlvmaqzi2i8&st=5h0y0w6e&dl=1">
+        <Link href="https://www.dropbox.com/scl/fi/hibhh4kchnkqskpt42thg/application-deelz-v.7-05.apk?rlkey=nm0nk06pjb1fnpf1qby4zrlxs&st=if34iqmp&dl=1">
           <Button>Telecharger</Button>
         </Link>
       }

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deelz - Marché en ligne au Togo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            200: '#e9d5ff',
+                            300: '#d8b4fe',
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            800: '#6b21a8',
+                            900: '#581c87',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        .delay-1 {
+            animation-delay: 0.5s;
+        }
+        .delay-2 {
+            animation-delay: 1s;
+        }
+      
+        
+        .slide-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+        .slide-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+        .fade-in.active {
+            opacity: 1;
+        }
+        
+        .phone-screen {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        
+            position: relative;
+            background: white;
+        }
+        
+        .screen-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .screen-nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .screen-nav-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-primary-900 text-white">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-store text-3xl mr-2 text-primary-300"></i>
+                <h1 class="text-2xl font-bold">Deelz</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#accueil" class="hover:text-primary-300 transition">Accueil</a>
+                <a href="#fonctionnalites" class="hover:text-primary-300 transition">Fonctionnalités</a>
+                <a href="#comment-ca-marche" class="hover:text-primary-300 transition">Comment ça marche</a>
+                <a href="#temoignages" class="hover:text-primary-300 transition">Témoignages</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="https://www.dropbox.com/scl/fi/hibhh4kchnkqskpt42thg/application-deelz-v.7-05.apk?rlkey=nm0nk06pjb1fnpf1qby4zrlxs&st=if34iqmp&dl=1" class="px-4 py-2 rounded-full bg-primary-600 hover:bg-primary-500 transition">Installer</a>
+                <button class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="py-16 md:py-24 bg-gradient-to-b from-primary-900 to-primary-700 text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0 slide-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Votre marché en ligne au Togo</h2>
+                <p class="text-xl mb-8 text-primary-200">Achetez et vendez facilement des vêtements, appareils électroniques, meubles et services dans tout le Togo.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://www.dropbox.com/scl/fi/hibhh4kchnkqskpt42thg/application-deelz-v.7-05.apk?rlkey=nm0nk06pjb1fnpf1qby4zrlxs&st=if34iqmp&dl=1" class="px-8 py-4 rounded-full bg-white text-primary-700 font-bold hover:bg-gray-100 transition text-center">Télécharger l'application</a>
+                    <a href="https://wa.me/?text=🌟%20J'ai%20découvert%20la%20meilleure%20application%20de%20vente%20et%20d'achat%20en%20ligne%20!%20%F0%9F%9A%80%0A%0A%E2%9C%85%20Clic%20sur%20ce%20lien%20pour%20l'installer%20et%20commence%20à%20vendre%20ou%20acheter%20en%20ligne%20%F0%9F%93%A1%0A%0Ahttps://www.dropbox.com/scl/fi/hibhh4kchnkqskpt42thg/application-deelz-v.7-05.apk?rlkey=nm0nk06pjb1fnpf1qby4zrlxs&st=if34iqmp&dl=1" class="px-8 py-4 rounded-full bg-green-500 text-white font-bold hover:bg-green-600 transition text-center flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        Partager sur WhatsApp
+                    </a>
+                </div>
+            </div>
+          
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="fonctionnalites" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 slide-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mb-4">Pourquoi choisir Deelz ?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">La plateforme tout-en-un pour vos achats et ventes au Togo</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-primary-50 p-8 rounded-2xl slide-in">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 text-primary-700">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary-900">Transactions rapides</h3>
+                    <p class="text-gray-600">Vendez et achetez en quelques clics avec notre interface intuitive et optimisée.</p>
+                </div>
+                
+                <div class="bg-primary-50 p-8 rounded-2xl slide-in delay-1">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 text-primary-700">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary-900">Sécurisé</h3>
+                    <p class="text-gray-600">Paiements sécurisés et système de notation pour des transactions en toute confiance.</p>
+                </div>
+                
+                <div class="bg-primary-50 p-8 rounded-2xl slide-in delay-2">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 text-primary-700">
+                        <i class="fas fa-map-marker-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary-900">Local</h3>
+                    <p class="text-gray-600">Trouvez des produits et services près de chez vous dans tout le Togo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works - App Screens -->
+    
+    <section id="comment-ca-marche" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mb-4 animate-fade-up">Comment ça marche</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto animate-fade-up-delay">Découvrez comment vendre vos produits en quelques étapes simples</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- Phone mockup with screens -->
+                <div class="lg:w-1/2 mb-12 lg:mb-0 flex justify-center">
+                    <div class="phone-screen w-72 h-[600px] relative perspective-1000">
+                        <!-- Screens will be shown here -->
+                        <div class="screen absolute inset-0 transform-style-3d transition-transform duration-700" data-screen="0">
+                            <div class="h-full flex flex-col backface-hidden">
+                                <img src="images/login.png" alt="Écran d'inscription" class="w-full h-full object-cover rounded-3xl">
+                            </div>
+                        </div>
+                        
+                        <!-- Screen 2 - Add product -->
+                        <div class="screen absolute inset-0 transform-style-3d transition-transform duration-700" data-screen="1">
+                            <div class="h-full flex flex-col backface-hidden">
+                                <img src="images/vendre.png" alt="Écran d'inscription" class="w-full h-full object-cover rounded-3xl">
+                            </div>
+                        </div>
+                        
+                        <!-- Screen 3 - View listings -->
+                        <div class="screen absolute inset-0 transform-style-3d transition-transform duration-700" data-screen="2">
+                            <div class="h-full flex flex-col backface-hidden">
+                                <img src="images/mess.png" alt="Écran d'inscription" class="w-full h-full object-cover rounded-3xl">
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation dots -->
+                        <div class="screen-nav flex gap-2 justify-center">
+                            <button class="nav-dot w-3 h-3 rounded-full bg-primary-200 transition-all duration-300 hover:bg-primary-500" data-screen="0"></button>
+                            <button class="nav-dot w-3 h-3 rounded-full bg-primary-200 transition-all duration-300 hover:bg-primary-500" data-screen="1"></button>
+                            <button class="nav-dot w-3 h-3 rounded-full bg-primary-200 transition-all duration-300 hover:bg-primary-500" data-screen="2"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Steps description -->
+                <div class="lg:w-1/2 lg:pl-12">
+                    <div class="mb-8 step-container" data-step="1">
+                        <div class="flex items-start mb-4 transform hover:scale-105 transition-transform duration-300">
+                            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 font-bold mr-4 step-number">1</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary-900 mb-2">Créez votre compte</h3>
+                                <p class="text-gray-600">Inscrivez-vous rapidement avec votre email ou numéro de téléphone. C'est gratuit et sans engagement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8 step-container" data-step="2">
+                        <div class="flex items-start mb-4 transform hover:scale-105 transition-transform duration-300">
+                            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 font-bold mr-4 step-number">2</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary-900 mb-2">Ajoutez vos produits</h3>
+                                <p class="text-gray-600">Prenez des photos de qualité, rédigez une description claire et fixez votre prix. Publiez en quelques minutes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-container" data-step="3">
+                        <div class="flex items-start mb-4 transform hover:scale-105 transition-transform duration-300">
+                            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 font-bold mr-4 step-number">3</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary-900 mb-2">Gérez vos annonces</h3>
+                                <p class="text-gray-600">Suivez les vues et les messages des acheteurs potentiels. Modifiez ou supprimez vos annonces à tout moment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+        .screen {
+            transform: rotateY(90deg);
+            opacity: 0;
+        }
+        .screen.active {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+        .nav-dot.active {
+            background-color: rgb(168, 85, 247);
+            transform: scale(1.2);
+        }
+        .step-container {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.5s ease-out;
+        }
+        .step-container.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .animate-fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+        }
+        .animate-fade-up-delay {
+            animation: fadeUp 0.8s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const screens = document.querySelectorAll('.screen');
+            const dots = document.querySelectorAll('.nav-dot');
+            const steps = document.querySelectorAll('.step-container');
+            let currentScreen = 0;
+
+            // Initialize first screen and step
+            screens[0].classList.add('active');
+            dots[0].classList.add('active');
+            steps[0].classList.add('active');
+
+            function showScreen(index) {
+                screens.forEach((screen, i) => {
+                    screen.classList.toggle('active', i === index);
+                });
+                
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+
+                steps.forEach((step, i) => {
+                    if (i === index) {
+                        step.classList.add('active');
+                    }
+                });
+            }
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    currentScreen = i;
+                    showScreen(i);
+                });
+            });
+
+            // Auto-rotate with smooth transitions
+            setInterval(() => {
+                currentScreen = (currentScreen + 1) % screens.length;
+                showScreen(currentScreen);
+            }, 5000);
+
+            // Intersection Observer for steps animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            steps.forEach(step => observer.observe(step));
+        });
+    </script>
+
+    <!-- Testimonials -->
+    <section id="temoignages" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 slide-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 mb-4">Ce que disent nos utilisateurs</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Découvrez les expériences de ceux qui utilisent déjà Deelz</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl slide-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary-100 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Aïcha M.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"J'ai vendu mes vieux meubles en 2 jours seulement ! La plateforme est très intuitive et j'ai reçu plusieurs propositions rapidement."</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-2xl slide-in delay-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary-100 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Komlan T.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"En tant que réparateur de téléphones, Deelz m'a permis de trouver de nouveaux clients locaux. Excellent outil pour les professionnels !"</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-2xl slide-in delay-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary-100 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Fatou K.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"J'ai trouvé des robes traditionnelles magnifiques à des prix imbattables. Beaucoup plus pratique que de faire le tour des marchés."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 slide-in">Prêt à commencer ?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-primary-200 slide-in delay-1">Rejoignez la communauté Deelz et découvrez une nouvelle façon d'acheter et vendre au Togo.</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://www.dropbox.com/scl/fi/hibhh4kchnkqskpt42thg/application-deelz-v.7-05.apk?rlkey=nm0nk06pjb1fnpf1qby4zrlxs&st=if34iqmp&dl=1" class="px-8 py-4 rounded-full bg-white text-primary-700 font-bold hover:bg-gray-100 transition text-center">Télécharger l'application</a>
+                <a href="https://wa.me/?text=🌟%20J'ai%20découvert%20la%20meilleure%20application%20de%20vente%20et%20d'achat%20en%20ligne%20!%20%F0%9F%9A%80%0A%0A%E2%9C%85%20Clic%20sur%20ce%20lien%20pour%20l'installer%20et%20commence%20à%20vendre%20ou%20acheter%20en%20ligne%20%F0%9F%93%A1%0A%0Ahttps://www.dropbox.com/scl/fi/hibhh4kchnkqskpt42thg/application-deelz-v.7-05.apk?rlkey=nm0nk06pjb1fnpf1qby4zrlxs&st=if34iqmp&dl=1" class="px-8 py-4 rounded-full bg-green-500 text-white font-bold hover:bg-green-600 transition text-center flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    Partager sur WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-store text-3xl mr-2 text-primary-400"></i>
+                        <h3 class="text-2xl font-bold">Deelz</h3>
+                    </div>
+                    <p class="text-gray-400">La plateforme de commerce en ligne préférée des Togolais.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-primary-300">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#fonctionnalites" class="text-gray-400 hover:text-white transition">Fonctionnalités</a></li>
+                        <li><a href="#comment-ca-marche" class="text-gray-400 hover:text-white transition">Comment ça marche</a></li>
+                        <li><a href="#temoignages" class="text-gray-400 hover:text-white transition">Témoignages</a></li>
+                    </ul>
+                </div>
+            
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-primary-300">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400"><i class="fas fa-envelope mr-2"></i> contact@deelz.tg</li>
+                        <li class="flex items-center text-gray-400"><i class="fas fa-phone mr-2"></i> +228 90 686845 / 96443332</li>
+                        <li class="flex items-center text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i> Atakpamé, Togo</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Deelz. Tous droits réservés.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.slide-in, .fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Phone screen navigation
+        const screens = document.querySelectorAll('.phone-screen > div');
+        const dots = document.querySelectorAll('.screen-nav-dot');
+        let currentScreen = 0;
+        
+        function showScreen(index) {
+            screens.forEach((screen, i) => {
+                if (i === index) {
+                    screen.classList.remove('opacity-0');
+                    screen.classList.add('opacity-100');
+                } else {
+                    screen.classList.remove('opacity-100');
+                    screen.classList.add('opacity-0');
+                }
+            });
+            
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+            
+            currentScreen = index;
+        }
+        
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const screenIndex = parseInt(dot.getAttribute('data-screen'));
+                showScreen(screenIndex);
+            });
+        });
+        
+        // Auto-rotate screens
+        setInterval(() => {
+            const nextScreen = (currentScreen + 1) % screens.length;
+            showScreen(nextScreen);
+        }, 4000);
+    </script>
+</body>
+</html>
